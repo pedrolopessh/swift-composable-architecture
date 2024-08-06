@@ -140,7 +140,16 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax",
       "state" : {
-        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
+        "version" : "509.1.1"
+      }
+    },
+    {
+      "identity" : "swift-syntax-xcframeworks",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sjavora/swift-syntax-xcframeworks",
+      "state" : {
+        "revision" : "c98f5094499d4a91a35f30c53f3c5bf6bd74040e",
         "version" : "509.0.2"
       }
     },

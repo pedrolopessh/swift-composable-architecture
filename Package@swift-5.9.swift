@@ -20,17 +20,17 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", from: "1.0.2"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    .package(url: "https://github.com/apple/swift-syntax", "509.0.0"..<"511.0.0"),
+	.package(url: "https://github.com/sjavora/swift-syntax-xcframeworks", exact: "510.0.1"),
     .package(url: "https://github.com/google/swift-benchmark", from: "0.1.0"),
     .package(url: "https://github.com/pointfreeco/combine-schedulers", from: "1.0.0"),
-    .package(url: "https://github.com/pointfreeco/swift-case-paths", from: "1.3.0"),
+    .package(url: "https://github.com/pedrolopessh/swift-case-paths", branch: "swift-syntax-test"),
     .package(url: "https://github.com/pointfreeco/swift-concurrency-extras", from: "1.1.0"),
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "1.0.0"),
-    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.1.0"),
+    .package(url: "https://github.com/pedrolopessh/swift-dependencies", branch: "swift-syntax-test"),
     .package(url: "https://github.com/pointfreeco/swift-identified-collections", from: "1.0.0"),
-    .package(url: "https://github.com/pointfreeco/swift-macro-testing", from: "0.2.0"),
-    .package(url: "https://github.com/pointfreeco/swift-perception", from: "1.1.1"),
-    .package(url: "https://github.com/pointfreeco/swiftui-navigation", from: "1.1.0"),
+    .package(url: "https://github.com/pedrolopessh/swift-macro-testing", branch: "swift-syntax-test"),
+    .package(url: "https://github.com/pedrolopessh/swift-perception", branch: "swift-syntax-test"),
+    .package(url: "https://github.com/pedrolopessh/swiftui-navigation", branch: "swift-syntax-test"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.1.0"),
   ],
   targets: [
@@ -60,8 +60,9 @@ let package = Package(
     .macro(
       name: "ComposableArchitectureMacros",
       dependencies: [
-        .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
-        .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
+//        .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
+//        .product(name: "SwiftCompilerPlugin", package: "swift-syntax"),
+		.product(name: "SwiftSyntaxWrapper", package: "swift-syntax-xcframeworks"),
       ]
     ),
     .testTarget(
